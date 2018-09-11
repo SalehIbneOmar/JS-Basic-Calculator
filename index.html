@@ -3,75 +3,94 @@
 
 <head>
 
-    <!-- Code By Saleh Ibne Omar, used HTML5 CSS3 JS BOOTSTRAP3 -->
+    <!-- =============== Coded by Saleh Ibne Omar ===============
+                         Date updated: 11 September 2018
+				         Date created: 28 March 2018
+				         Copyright 2018, Saleh Ibne Omar
+	-->
 
     <meta charset="UTF-8">
+	
     <title>JS Calculator</title>
-    <link rel="icon" href="calculator.png">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+	<!-- Bootstrap 3 CSS -->
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Title icon -->
+    <link rel="icon" href="calculator.png">
+	<!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+	
 </head>
 
 <body>
     <div class="container">
         <div class="row saleh">
-            <div class=" col-xs-12  col-sm-offset-4 col-sm-12  col-md-offset-3 col-md-6  col-lg-offset-3 col-lg-6  ">
+            <div class=" col-xs-12  col-sm-offset-4 col-sm-12  col-md-offset-3 col-md-6  col-lg-offset-3 col-lg-6 ">
+			
                 <form name="form" class="well calcontainer  col-md-offset-3 col-md-6  col-lg-offset-3 col-lg-6">
 
-                    <!-- panel for the calc -->
+                    <!-- Calculator panel starts -->
 
-                    <input class=" form-control " id="panel" name="panel" placeholder="0." disabled><br/>
+                    <input class="form-control" id="panel"  placeholder="&copy;&nbsp;Saleh" disabled><br/>
+					
+					<!-- Calculator panel ends -->
 
-                    <!-- User Input Buttons for the calc -->
+                    <!-- User input value button sets starts -->
 
-                    <input class="form-group btn btn-default bttn" type="button" name="bttn7" value="7" onclick="calC(bttn7.value);">
-                    <input class="form-group btn btn-default bttn" type="button" name="bttn8" value="8" onclick="calC(bttn8.value);">
-                    <input class="form-group btn btn-default bttn" type="button" name="bttn9" value="9" onclick="calC(bttn9.value);">
-                    <input class="form-group btn btn-danger bttn" type="button" name="bttnplus" value="+" onclick="calC(bttnplus.value);"><br/>
-                    <input class="form-group btn btn-default bttn" type="button" name="bttn4" value="4" onclick="calC(bttn4.value);">
-                    <input class="form-group btn btn-default bttn" type="button" name="bttn5" value="5" onclick="calC(bttn5.value);">
-                    <input class="form-group btn btn-default bttn" type="button" name="bttn6" value="6" onclick="calC(bttn6.value);">
-                    <input class="form-group btn btn-danger bttn" type="button" name="bttnminus" value="-" onclick="calC(bttnminus.value);"><br/>
+                    <input class="form-group btn btn-default bttn" type="button"   value="7" onclick="calC(value);">
+                    <input class="form-group btn btn-default bttn" type="button"   value="8" onclick="calC(value);">
+                    <input class="form-group btn btn-default bttn" type="button"   value="9" onclick="calC(value);">
+					<!-- Plus operator -->
+                    <input class="form-group btn btn-danger  bttn" type="button"   value="+" onclick="calC(value);"><br/>
+                    <input class="form-group btn btn-default bttn" type="button"   value="4" onclick="calC(value);">
+                    <input class="form-group btn btn-default bttn" type="button"   value="5" onclick="calC(value);">
+                    <input class="form-group btn btn-default bttn" type="button"   value="6" onclick="calC(value);">
+					<!-- Minus operator -->
+                    <input class="form-group btn btn-danger  bttn" type="button"   value="-" onclick="calC(value);"><br/>
+					
+					
 
-                    <input class="form-group btn btn-default bttn" type="button" name="bttn1" value="1" onclick="calC(bttn1.value);">
-                    <input class="form-group btn btn-default bttn" type="button" name="bttn2" value="2" onclick="calC(bttn2.value);">
-                    <input class="form-group btn btn-default bttn" type="button" name="bttn3" value="3" onclick="calC(bttn3.value);">
-                    <input class="form-group btn btn-danger bttn" type="button" name="bttnmulti" value="*" onclick="calC(bttnmulti.value);"><br/>
-                    <input class="form-group btn btn-default bttn" type="button" name="bttndot" value="." onclick="calC(bttndot.value);">
-                    <input class="form-group btn btn-default bttn" type="button" name="bttn0" value="0" onclick="calC(bttn0.value);">
-                    <input class="form-group btn btn-danger bttn" type="button" name="bttnmod" value="%" onclick="calC(bttnmod.value);">
-                    <input class="form-group btn btn-danger bttn" type="button" name="bttndiv" value="/" onclick="calC(bttndiv.value);"><br/>
+                    <input class="form-group btn btn-default bttn"  type="button"   value="1" onclick="calC(value);">
+                    <input class="form-group btn btn-default bttn"  type="button"   value="2" onclick="calC(value);">
+                    <input class="form-group btn btn-default bttn"  type="button"   value="3" onclick="calC(value);">
+					<!-- Multiplication operator -->
+                    <input class="form-group btn btn-danger  bttn"  type="button"   value="*" onclick="calC(value);"><br/>
+					<!-- Decimal point operator -->
+                    <input class="form-group btn btn-default bttn"  type="button"   value="." onclick="calC(value);">
+                    <input class="form-group btn btn-default bttn"  type="button"   value="0" onclick="calC(value);">
+					<!-- Modulas operator -->
+                    <input class="form-group btn btn-danger  bttn"  type="button"   value="%" onclick="calC(value);">
+					<!-- Division operator -->
+                    <input class="form-group btn btn-danger  bttn"  type="button"   value="/" onclick="calC(value);"><br/>
 
 
 
+                    <input class="form-group btn btn-primary bttnpi"    type="button"   value="&pi;"    onclick="pai();">
+                    <input class="form-group btn btn-primary bttnsqrt"  type="button"   value="&radic;" onclick="rt();">
+                    <input class="form-group btn btn-danger  bttn"      type="button"   value="("       onclick="calC(value);">
+                    <input class="form-group btn btn-danger  bttn"      type="button"   value=")"       onclick="calC(value);">
 
-                    <input class="form-group btn btn-primary bttnpi" type="button" value="&pi;" onclick="pai();">
-                    <input class="form-group btn btn-primary bttnsqrt" type="button" value="&radic;" onclick="rt();">
-                    <input class="form-group btn btn-danger bttn" type="button" name="bttnfop" value="(" onclick="calC(bttnfop.value);">
-                    <input class="form-group btn btn-danger bttn" type="button" name="bttnfcl" value=")" onclick="calC(bttnfcl.value);">
-
-                    <!-- calling new reset function -->
-                    <input class="form-group btn btn-info bttn bttne" type="button" name="bttnclear" value="CE" onclick="CE();">
-                    <!-- evaluating the values -->
-                    <input class="form-group btn btn-success bttn bttne" type="button" name="bttnEQL" value="=" onclick="panel.value=eval(panel.value);">
-
+                    <!-- All clear function -->
+                    <input class="form-group btn btn-info bttn    bttne"    type="button"  value="CE" onclick="CE();">
+                    <!-- Result function -->
+                    <input class="form-group btn btn-success bttn bttne"    type="button"  value="="  onclick="result();">
+					
+					<!-- User input value button sets starts -->
 
                 </form>
-
-
             </div>
-
         </div>
     </div>
+	
+	<!-- Bootstrap 3 and jQuery script -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- my own JS -->
+    <!-- Script -->
     <script src="script.js"></script>
+	
 </body>
 
 </html>

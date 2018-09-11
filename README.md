@@ -1,1 +1,1 @@
-# jscalculator
+# Functional JS calculator by Saleh Ibne Omar
